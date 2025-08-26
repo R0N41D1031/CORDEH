@@ -1,36 +1,39 @@
 ---
+// src/pages/team.astro
+import Layout from '../layouts/Layout.astro';
+
+// Función para generar IDs seguros
+function slugify(str: string): string {
+  return str
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9áéíóúñ\s]/g, '')
+    .replace(/\s+/g, '-');
+}
+
+// Datos del equipo
 const team = [
   {
     name: 'Juan Esteban Pinzon',
     role: 'CEO & Fundador',
-    bio: 'Apasionada por crear soluciones que marcan la diferencia.',
-    photo: 'juan.png',
-    link: '/team/Juan',
+    bio: 'Apasionado por crear soluciones que marcan la diferencia.',
+    photo: '/juan.png',
+    link:'/team/juan-esteban-pinzon'
   },
   {
     name: 'Ronald Torres',
     role: 'Desarrollador Full Stack',
     bio: 'Fanático de Astro, React y el código limpio. Siempre buscando la solución más eficiente.',
     photo: '/riuk.jpg',
-    link: '/team/Ronald',
-  },
-  {
-    name: 'Lucía Ríos',
-    role: 'Gestora de Proyectos',
-    bio: 'Experta en llevar ideas del papel a la realidad, coordinando diseño, desarrollo y clientes.',
-    photo:'https://picsum.photos/seed/person1/400/400',
-    link: '/team/lucia',
+    link:'/team/ronald-torres'
   },
 ];
-// src/pages/index.astro
-import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Equipo">
-  <div class="text-center">
-  <section class="py-5">
-    <h1 class="text-5xl font-extrabold mb-6">Nuestro equipo</h1>
+<Layout title="Nuestro Equipo">
+  <section class="py-20">
     <div class="container mx-auto px-4 text-center max-w-5xl">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Nuestro equipo</h1>
       <p class="text-xl text-white/85 mb-12">
         Personas apasionadas por el diseño, el código y las buenas ideas.
       </p>
@@ -38,29 +41,26 @@ import Layout from '../layouts/Layout.astro';
       <!-- Grid de tarjetas -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {team.map((member) => (
-          <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-purple-900/20 transition duration-300">
-            <!-- Foto del miembro -->
-            <img
-              src={member.photo}
-              alt={member.name}
-              class="w-full h-64 object-cover object-center"
-            />
-            <!-- Info -->
-            <div class="p-6 text-center">
-              <h3 class="text-xl font-bold text-white">{member.name}</h3>
-              <p class="text-purple-300 font-medium mb-3">{member.role}</p>
-              <p class="text-white/75 text-sm leading-relaxed">{member.bio}</p>
-              <a href={member.link} class="mt-8 inline-block px-8 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full font-semibold hover:bg-white/30 transition hover:scale-105">
-                Ver perfil
-              </a>
+          <>
+            <!-- Tarjeta -->
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-purple-900/20 transition duration-300">
+              <img
+                src={member.photo}
+                alt={member.name}
+                class="w-full h-64 object-cover object-center"
+              />
+              <div class="p-6 text-center">
+                <h3 class="text-xl font-bold text-white">{member.name}</h3>
+                <p class="text-purple-300 font-medium mb-3">{member.role}</p>
+                <p class="text-white/75 text-sm leading-relaxed">{member.bio}</p>
+                <a href={member.link} class="mt-8 inline-block px-8 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full font-semibold hover:bg-white/30 transition hover:scale-105">
+		              Ver perfil »
+	              </a>
+              </div>
             </div>
-          </div>
+          </>
         ))}
       </div>
     </div>
   </section>
-    <a href="/about" class="mt-8 inline-block px-8 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full font-semibold hover:bg-white/30 transition hover:scale-105">
-      Conoce más »
-    </a>
-  </div>
 </Layout>

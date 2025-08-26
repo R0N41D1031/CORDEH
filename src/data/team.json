@@ -1,0 +1,30 @@
+{
+  "juan-esteban-pinzon": {
+    "name": "Juan Esteban Pinzón",
+    "role": "CEO & Fundador",
+    "photo": "/juan.png",
+    "bio": "Apasionado por crear soluciones que marcan la diferencia.",
+    "biolong": "Soy Juan Esteban Pinzón, CEO y fundador de CordeH. Con más de 10 años de experiencia en desarrollo web y móvil, he liderado proyectos innovadores que han transformado la manera en que las empresas interactúan con sus clientes. Mi pasión por la tecnología y el emprendimiento me impulsa a buscar constantemente nuevas formas de crear valor y marcar la diferencia en el mundo digital.",
+    "phone": "+57 300 123 4567",
+    "email": "juan@cordeh.com",
+    "social": {
+      "twitter": "https://twitter.com/juanepinzon",
+      "github": "https://github.com/ronaldcode",
+      "linkedin": "https://www.linkedin.com/in/juan-esteban-pinzon/"
+    }
+  },
+  "ronald-torres": {
+    "name": "Ronald Torres",
+    "role": "Desarrollador Full Stack",
+    "photo": "/riuk.jpg",
+    "bio": "Fanático de Astro, React y el código limpio. Siempre buscando la solución más eficiente.",
+    "biolong": "Soy Ronald Torres, Desarrollador Full Stack en CordeH. Con más de 5 años de experiencia en desarrollo web, me especializo en crear aplicaciones eficientes y escalables utilizando tecnologías modernas como Astro y React. Mi enfoque está en escribir código limpio y optimizado, siempre buscando la mejor solución para cada desafío técnico. Me apasiona aprender nuevas tecnologías y mejorar continuamente mis habilidades para ofrecer el mejor valor a nuestros clientes.",
+    "phone": "+57 301 234 5678",
+    "email": "ronald@cordeh.com",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/ronald-torres-dev/",
+      "twitter": "https://twitter.com/juanepinzon",
+      "github": "https://github.com/ronaldcode"
+    }
+  }
+}
