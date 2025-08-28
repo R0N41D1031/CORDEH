@@ -1,8 +1,68 @@
 ---
 // src/components/Footer.astro
+import Icon from '../Icon.astro';
 ---
   
 <!-- Footer -->
 <footer class="py-8 border-t border-white/20 bg-black/20 text-center text-sm opacity-90">
-<p>© {new Date().getFullYear()} Cordeh. Hecho con <span class="text-red-400">❤️</span>. Siguenos en <a href="https://www.instagram.com/" class="text-purple-300 hover:underline">Instagram</a> y <a href="https://tailwindcss.com" class="text-cyan-300 hover:underline">Tailwind CSS</a>.</p>
+    <!-- Redes sociales -->
+    <div class="flex justify-center space-x-6 text-lg">
+        <p>© {new Date().getFullYear()} Cordeh. Hecho con <span class="text-red-400">❤️</span>. Siguenos en todas nuestras redes sociales.</p>
+      <!-- Redes sociales con tooltips -->
+    <div class="flex justify-center space-x-6 text-lg">
+      {/* LinkedIn */}
+      <div class="tooltip">
+        <a
+          href="https://www.linkedin.com/in/juan-esteban-pinzon/"
+          target="_blank"
+          rel="noopener"
+          class="text-gray-400 hover:text-blue-400 transition social-icon"
+          aria-label="LinkedIn"
+        >
+          <Icon name="linkedin" />
+        </a>
+        <span class="tooltip-text">LinkedIn</span>
+      </div>
+
+      {/* Twitter/X */}
+      <div class="tooltip">
+        <a
+          href="https://twitter.com/juanepinzon"
+          target="_blank"
+          rel="noopener"
+          class="text-gray-400 hover:text-sky-400 transition social-icon"
+          aria-label="Twitter/X"
+        >
+          <Icon name="twitter" />
+        </a>
+        <span class="tooltip-text">Twitter/X</span>
+      </div>
+
+      {/* Instagram */}
+      <div class="tooltip">
+        <a
+          href="https://www.instagram.com/tuusuario/"
+          target="_blank"
+          rel="noopener"
+          class="text-gray-400 hover:text-pink-400 transition social-icon"
+          aria-label="Instagram"
+        >
+          <Icon name="instagram" />
+        </a>
+        <span class="tooltip-text">Instagram</span>
+      </div>
+
+      {/* Facebook */}
+      <div class="tooltip">
+        <a
+          href="https://www.facebook.com/tuusuario/"
+          target="_blank"
+          rel="noopener"
+          class="text-gray-400 hover:text-blue-600 transition social-icon"
+          aria-label="Facebook"
+        >
+          <Icon name="facebook" />
+        </a>
+        <span class="tooltip-text">Facebook</span>
+      </div>
 </footer>

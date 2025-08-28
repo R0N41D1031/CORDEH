@@ -35,3 +35,93 @@ dialog.modal::backdrop {
   max-height: 90vh;
   overflow-y: auto;
 }
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366; /* Color oficial de WhatsApp */
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 3px solid white;
+  opacity: 0.95;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.whatsapp-icon {
+  width: 36px;
+  height: 36px;
+  fill: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive: Ajusta tamaño en móviles */
+@media (max-width: 640px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .whatsapp-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 14px;
+  position: absolute;
+  z-index: 1001;
+  bottom: 130%; /* Ajusta para que aparezca arriba del ícono */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
